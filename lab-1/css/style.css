@@ -1,11 +1,66 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Six+Caps&display=swap');
 html {
+    /* used padding and max-width from lesson 2 */
     line-height: 1.3;
     font-size: 16;
+    margin: auto;
+    padding: 5%;
+    min-width: none;
+    max-width: 950px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+h1 {
+    /* targets our title */
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    margin: 0;
+}
+h2 {
+    /* google font for style */
+    font-family: "Lato", serif;
+    font-weight: 300;
+    font-style: normal;
+    border: 2px solid black;
+    /* set the width to cover just the editorial word*/
+    width: 8rem;
+    text-transform: uppercase;
     
 }
-/* Borrowed from  'main' from class lesson 2 COMP1054 W25 */
+h3 {
+    /* set a sans-serif font for h3, and for h4 */
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+h4 {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
 main {
+    /* set up columns and hyphens */
     column-count: 3;
-  
+    hyphens: auto;
+    text-align: justify;
+    
   }
+/* removed the indent from the first paragraph */
+/* borrowed from  'main' from class lesson 2 COMP1054 W25 */
+main p:first-of-type {
+    text-indent: 0rem;
+}
+/* added indents to all paragraphs */
+p {
+    text-indent: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* imported google font for style */
+h1 {
+    font-family: "Six Caps", serif;
+    font-weight: 400;
+    font-style: normal;    
+};
