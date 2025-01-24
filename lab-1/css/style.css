@@ -1,0 +1,11 @@
+@charset "UTF-8";
+html {
+    line-height: 1.3;
+    font-size: 16;
+    
+}
+/* Borrowed from  'main' from class lesson 2 COMP1054 W25 */
+main {
+    column-count: 3;
+  
+  }
