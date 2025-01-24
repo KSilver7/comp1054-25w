@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Six+Caps&display=swap');
+
+html {
+    line-height: 1.3;
+    font-size: 16px;
+    max-width: 950px;
+    /*margin, and padding from lesson 3 COMP 1054*/
+    margin: auto;
+    padding: 5%;
+    font-family: 'Times New Roman', Times, 'serif';
+}
+
+/* 3 column layout from lesson 3 COMP 1054 */
+main {
+    column-count: 3;
+    hyphens: auto;
+    text-align: justify;
+  }
+/*  TYPOGRAPY   */
+
+/*  Title of article   */
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    margin: 0;
+    font-family: "Six Caps", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* from user Maximillian Laumeister https://stackoverflow.com/questions/32040635/css-box-around-text-set-box-size */
+/*  EDITORIAL   */
+h2 {
+    border: 2px solid black;
+    width: 8rem;
+    font-family: "Lato", serif;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+}
+/*  INTRO   */
+h3 {
+    font-family: helvetica;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h4 {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* remove indent from first paragraph */
+main p:first-of-type {
+    text-indent: 0;
+}
+p {
+    text-indent: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
