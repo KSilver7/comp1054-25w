@@ -8,22 +8,27 @@
 			font-family: Helvetica, Arial, sans-serif;
 			font-size: 300%;
 			color: red;
+			font-weight: bold;
 		}
 		/* STEP 1: Basic shadow with x and y offset */
 		.basic {
-			
+			text-shadow: 2px 3px;
 		}
 		/* STEP 2: Basic shadow with offset plus color */
 		.basic-color {
-			
+			text-shadow: 0.05em 0.05em grey;
 		}
 		/* STEP 3: Text shadow with a blur radius */
 		.blur {
-			
+			text-shadow: 2px 3px 4px black;
 		}
 		/* STEP 4: Multiple text shadows */
 		.multiple {
-		
+			text-shadow:
+				5px 5px orange,
+				-5px 0 lime,
+				0 5px hotpink,
+				5px 5px cyan;
 		}
 	</style>
 </head>

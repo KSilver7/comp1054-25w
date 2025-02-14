@@ -4,20 +4,23 @@
 	<meta charset="utf-8" />
 	<title>Border Image | COMP1054 Web User Interface Design</title>
 	<link rel="stylesheet" href="css/border-image.css" />
-	<script src="js/jquery.js"></script>
 	<style>
 		/* CSS border-image-repeat example
 		Thanks to Chris Coyier (https://css-tricks.com/almanac/properties/b/border-image/) */
 
 		/* STEP 1: Examine the image we will use - 'img/doily.png' */
 		.bordered-box {
-			
+			border:35px solid pink;
+			height: 40vh;
+			width: 40vw;
 			/* STEP 2: Set the border-image-source */
-			
+			border-image-source: url("img/doily.png");
 			/* STEP 3: Set the border-image slice, width, and outset */
-			
+			border-image-slice: 30;
+			border-image-width: auto;
+			border-image-outset: 10px;
 			/* STEP 4: Set the border-image-repeat (stretch | repeat | round | space) */
-			
+			border-image-repeat: round;
 		}
 
 		body {
