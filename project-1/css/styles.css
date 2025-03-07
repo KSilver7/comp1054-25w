@@ -8,10 +8,9 @@ html {
     font-size: 16px;
     margin: auto;
     padding: 5%;
-    min-width: none;
     max-width: 950px;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(128, 125, 125);
+    background-color: rgb(53, 52, 52);
 }
 /* make the border box inherit */
 *, *:before, *:after {
@@ -20,8 +19,8 @@ html {
 
 /* add a background color to the body */
 body {
-    background-color: rgb(233, 232, 231);
-    border-width: auto;
+    background-color: rgb(104, 98, 98);
+    border-width: 5px;
 }
 
 /* use the container id to set the content to flex */
@@ -80,4 +79,10 @@ aside {
 }
 .video {
     background-color: rgba(248, 168, 248, 0.666);
+}
+/* round the edges for some variance */
+h2 {
+    border: 1px solid black;
+    border-radius: 1.5em;
+    padding: 5px
 }
