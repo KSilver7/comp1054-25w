@@ -20,5 +20,31 @@ html {
 
 /* add a background color to the body */
 body {
-    background-color: palegoldenrod;
+    background-color: rgb(233, 232, 231);
+    border-width: auto;
+}
+
+/* use the container id to set the content to flex */
+#container {
+    display: flex;
+    /* set the direction */
+    flex-direction: column;
+    /* set the width */
+    width: 80%;
+    margin: auto;
+}
+/* add a box around the header */
+header {
+    border: 5px dotted magenta;
+    /*set the margin and padding of the box */
+    margin: 20px auto;
+    padding: 0 3%;
+    
+}
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+h1, h2 {
+    font-style: italic;
 }
