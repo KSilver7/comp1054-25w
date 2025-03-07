@@ -55,7 +55,29 @@ article {
     border: 3px solid black;
     padding: 5%;
     margin-bottom: 20px;
+    background-color: rgba(248, 168, 248, 0.666);
 }
 p {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+section {
+    border: 3px solid black;
+    padding: 5%;
+    margin-bottom: 20px;
+    background-color: rgba(204, 250, 193, 0.755);
+}
+aside {
+    border: 3px solid black;
+    padding: 5%;
+    margin-bottom: 20px;
+}
+/* add a background colour to each aside*/
+.Nano {
+    background-color: rgba(248, 168, 248, 0.666);
+}
+.DevilishP {
+    background-color: rgba(204, 250, 193, 0.755);
+}
+.video {
+    background-color: rgba(248, 168, 248, 0.666);
 }
