@@ -94,7 +94,7 @@
 			}
 
 			/* STEP 7a: Build out the styles for the pullquote, adding the class="pullquote2" to the SPAN element in the HTML to see how the styles look */
-
+			
 			/* STEP 7b: Add leading quotation marks and style them */
 
 			/* STEP 7c: Remove the class"pullquote2" from the HTML */
@@ -120,9 +120,19 @@
 				color: black;
 			}
 			/* STEP 3a: Build out the sticky footer 'Back to top' button styles */
-			
+			footer a.top{
+				position: fixed;
+				bottom: 1.5rem;
+				right: 1.5rem;
+				background-color: rgb(o, 0, 0, 0.3);
+				padding: 10px;
+				border-radius: 50%;
+				height: 30px;
+				width: 30px;
 				/* STEP 3b: Now hide the button entirely, and we will make it visible later with JavaScript */
-			
+				/* display: none; */
+				visibility: hidden;
+			}
 
 		</style>
 	</head>
@@ -177,7 +187,7 @@
 		let navTop = nav.offsetTop;
 		console.log(navTop + "pixels from top.");
 		// STEP 4a: Get the 'Back to top' button from the DOM with a const topButton
-		
+		const topButton = document.querySelector("for a.top");
 		// STEP 8a: Assign any and all elements with the class="pullquote" to the const pullQuote
 		
 		// STEP 2c: Build an event listener for the scroll event (https://developer.mozilla.org/en-US/docs/Web/Events/scroll)
@@ -188,23 +198,31 @@
 				// STEP 2e: Automatically add the class="floater" to enable the persistent navigation styles we built out in STEP 1
 				nav.classList.add("floater");				
 				// STEP 4b: Set the sticky footer 'Back to top' button to display 'block' as the user has scrolled down the page somewhat
-
+				topButton.style.visibility = "visible";
 			} else {		
 				// STEP 2f: The user is pretty close to the top of the page, so remove the class="floater" and display the regular tab-based navigation
 				nav.classList.remove("floater");
 				// STEP 4c: The user doesn't need the 'Back to top' button - they are at the top of the page, so set it to display 'none'
+				topButton.style.visibility = "hidden";
 			}	
 		});
 
 			// STEP 6a: Attach event listener to 'Back to top' button that calls the scrollToTop function built in STEP 5
-			
+			topButton.addEventListener("click", function(event) {
 				// STEP 6b: Prevent the default action of the anchor
-			
-
+				event.preventDefault();
+				// STEP 6c: Call the scrollToTop() function
+				scrollToTop();
+			});
 			// STEP 5a: Build out Scroll-To-Top function
-			
+			function scrollToTop() {
 				// STEP 5b: Use the scrollBy() method to scroll the browser back up to the top of the page (https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy)
-						
+				window.scroll({
+					top: 0,
+					left: 0,
+					behavior: "smooth"
+				});		
+			};
 
 			// STEP 8b: Write a forEach loop to duplicate the pullquote text and insert it into the page
 			
