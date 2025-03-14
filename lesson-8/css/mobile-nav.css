@@ -40,7 +40,7 @@ img {
 }
 /* STEP 5: Put diagnostic borders around HEADER, HEADER H1, and HEADER NAV */
 header {
-	outline: 3px dashed red;
+	/* outline: 3px dashed red; */
 	background: var(--primary-color);
 	/* STEP 6a: Attach the HEADER to the top left of the viewport (fixed) */
 	position: fixed;
@@ -55,7 +55,7 @@ header {
 }
 /* Link styling for the page-level header */
 header h1 {
-	outline: 3px dashed orange;
+	/* outline: 3px dashed orange; */
 	color: var(--text-and-icons);
 	margin: 20px;
 }
@@ -75,7 +75,7 @@ header a:active {
 	color: var(--primary-text);
 }
 header nav{
-	outline: 3px dashed green;
+	/* outline: 3px dashed green; */
 }
 main {
 	/* STEP 18a: The content of the page is a bit hard to read - let's add a top margin to the MAIN element, center it, and some padding */
@@ -179,17 +179,17 @@ label[for="toggle-menu"] {
 	/* Hide the hamburger menu checkbox label (checkbox is already hidden) */
 	label[for="toggle-menu"] {
 			/* STEP 20: For large screens, we don't need the hamburger or the close menu icon/button */
-			
+			display: none;
 	}
 	header nav ul {
 			/* STEP 21a: Restore the navigation so that it is back in the regular flow of the page */
-			
+			position: static;
 			/* STEP 21b: We don't need the grey background, anymore */
-			
+			background-color: transparent;
 	}
 	header nav li {
 			/* STEP 22: Set the LI elements to render horizontally instead of vertically */
-			
+			display: inline-block;
 	}
 	header a:hover {
 			color: var(--light-primary-color);
