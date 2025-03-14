@@ -52,7 +52,16 @@
 			}
 
 			/* STEP 1a: Persistent navigation - manually add the class="floater" to the HEADER NAV and build out a fixed horizontal navigation bar */
-			
+			header nav.floater {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background-color: rgb(0, 0, 0, 0.5);
+			}
+			header nav.floater li {
+				background-color: transparent;
+			}
 			/* STEP 1b: Remove the class="floater" from the HTML */
 
 			main {
@@ -65,6 +74,7 @@
 				margin-top: 0;
 			}
 			main blockquote {
+				
 			}
 
 			header h1 {
@@ -162,27 +172,29 @@
 		<script>
 		// STEP 2: Build out script to control visibility of persistent navigation based on the scrolling position
 		// STEP 2a: Grab the #floatingbar as a var
-		
+		const nav = document.querySelector("#floatingbar");
 		// STEP 2b: Determine how far down the top of the #floatingbar is from the top of the viewport and capture it with a variable called navTop
-		
+		let navTop = nav.offsetTop;
+		console.log(navTop + "pixels from top.");
 		// STEP 4a: Get the 'Back to top' button from the DOM with a const topButton
 		
 		// STEP 8a: Assign any and all elements with the class="pullquote" to the const pullQuote
 		
 		// STEP 2c: Build an event listener for the scroll event (https://developer.mozilla.org/en-US/docs/Web/Events/scroll)
-		
+		window.addEventListener("scroll", function() {
 			// STEP 2d: Check if the scroll position is further down than the top of the navbar...
-			
+			// console.log("Window scrolled!");
+			if (window.pageYOffset > navTop) {
 				// STEP 2e: Automatically add the class="floater" to enable the persistent navigation styles we built out in STEP 1
-				
+				nav.classList.add("floater");				
 				// STEP 4b: Set the sticky footer 'Back to top' button to display 'block' as the user has scrolled down the page somewhat
-				
-			
+
+			} else {		
 				// STEP 2f: The user is pretty close to the top of the page, so remove the class="floater" and display the regular tab-based navigation
-				
+				nav.classList.remove("floater");
 				// STEP 4c: The user doesn't need the 'Back to top' button - they are at the top of the page, so set it to display 'none'
-					
-		
+			}	
+		});
 
 			// STEP 6a: Attach event listener to 'Back to top' button that calls the scrollToTop function built in STEP 5
 			
