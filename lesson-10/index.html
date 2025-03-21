@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="css/normalize.css" rel="stylesheet" />
 		<link href="css/accordion.css" rel="stylesheet" />
-		<script src="js/accordion.js" defer></script>
+		<!-- <script src="js/accordion.js" defer></script> -->
 	</head>
 	<body>
 		<div id="container">
@@ -16,14 +16,14 @@
 			<main>
 				<h2>The Details Element</h2>
 				<!-- STEP 1: Surround each H3 and DIV pair with DETAILS tags -->
-				<details>
+				<details name="accordion">
 					<summary>Lorem Ipsum</summary>
 					<div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et eleifend risus. Praesent eu orci sed sapien maximus scelerisque at quis justo.</p>
 						<p>Fusce lacus lacus, molestie et imperdiet vel, consequat at felis. Mauris eget tortor nec magna efficitur tempus. Phasellus lacus tortor, viverra ut interdum faucibus, consectetur imperdiet urna.</p>
 						<p>Integer auctor sagittis lectus, sit amet sollicitudin diam iaculis ut. Integer orci mi, hendrerit ut dui at, maximus semper ante. Morbi ac tellus neque.</p>
 					</div>
-				</details>
+				</details name="accordion">
 				<!-- STEP 2: Replace each pair of H3 tags with SUMMARY tags, validate your HTML (https://validator.w3.org/), then proceed to the CSS for the next step -->
 				<details>
 					<summary>Sed ut Purus</summary>
@@ -32,7 +32,7 @@
 						<p>Quisque nisi risus, dignissim in placerat id, gravida in elit. Proin et mollis libero, quis finibus tortor. Nullam condimentum posuere venenatis. Nam ex risus, maximus ut imperdiet ultrices, ornare id velit.</p>
 					</div>
 				</details>
-				<details>
+				<details name="accordion">
 					<summary>Etiam Gravida</summary>
 					<div>
 						<p>Etiam gravida sit amet odio nec accumsan. Suspendisse imperdiet ac quam in cursus. Pellentesque ut nunc quis velit pharetra aliquet. Donec sodales eget libero id efficitur. Donec ex dui, dapibus a dui sit amet, fermentum dignissim risus.</p>
