@@ -5,15 +5,64 @@
 html {
 	box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 
 html {
 	font-family: "Open Sans", sans-serif;
 }
+
 #container {
 	width: 80%;
 	margin: 0 auto;
 }
 
+/* Basic styling for the tabs container */
+.tabs ul[role="tablist"] {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+/* Remove bottom border */
+.tabs ul[role="tablist"] li[role="tab"] a {
+	display: block;
+	padding: 10px 15px;
+	background-color: lightgrey;
+	border: 2px solid black;
+	border-bottom: none;
+	text-decoration: none;
+	color: #333;
+	font-weight: bolder;
+	border-radius: 6px 6px 0 0;
+	margin: 0 0.25rem;
+	z-index: 10;
+}
+
+.tabs ul[role="tablist"] li[role="tab"].active a {
+	background-color: white;
+}
+
+/* Styling for the tab panels */
+.tabs div[role="tabpanel"] {
+	display: none;
+	/* Hide panels by default */
+	padding: 20px;
+	border: 2px solid black;
+
+}
+
+/* Show active panel */
+.tabs div[role="tabpanel"].active {
+	display: block;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+}
