@@ -18,25 +18,55 @@ main {
     align-items: flex-start;
 }
 
+/* Target the aside that holds the image*/
+main > aside:nth-child(4) {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+main > section, main>aside:nth-child(5) {
+    flex: 1 1 auto;
+    margin-bottom: 10px;
+}
+/* Target each of the remaining children separately*/
+main > section:nth-child(1) {
+    
+}
+main > aside:nth-child(2) {
+
+}
+main > section:nth-child(3) {
+
+}
+main > aside:nth-child(5) {
+    
+}
 /* To get the date line in all capitals use text transform.
 Postition absolute will move the date above the title.
 Add the z-index to make sure it stays as the top.
 */
+#container {
+    position: relative; 
+    padding: 20px;
+}
 body header p {
     text-transform: uppercase;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
+    padding: 5px;
 }
 
 /*similarly text-transform will make the title lowercase*/
 header h1 {
     text-transform: lowercase;
     /* increase the size of the h1*/
-    font-size: 5rem;
+    font-size: 7rem;
     /* a nice font that looks similar to the article's title*/
     font-family: 'Merriweather', serif;
+    font-weight: lighter;
+    margin: 20px 5px;
 }
 
 h2 {
