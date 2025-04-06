@@ -9,15 +9,27 @@ html {
 *, *:before, *:after {
 	box-sizing: inherit;
 }
+
+/* Make the main a Flex container, it's children will inherit and become flex items*/
+main {
+    display: flex;
+    /* flex flow combines both flex-direction and flex-wrap */
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
 /* To get the date line in all capitals use text transform.
 Postition absolute will move the date above the title.
+Add the z-index to make sure it stays as the top.
 */
 body header p {
     text-transform: uppercase;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 10;
 }
+
 /*similarly text-transform will make the title lowercase*/
 header h1 {
     text-transform: lowercase;
@@ -26,8 +38,13 @@ header h1 {
     /* a nice font that looks similar to the article's title*/
     font-family: 'Merriweather', serif;
 }
+
 h2 {
     /*Crimson Text looks very close to the h2's*/
     font-family: 'Crimson Text', serif;
     text-transform: lowercase;
+}
+
+h3 {
+    text-transform: uppercase;
 }
