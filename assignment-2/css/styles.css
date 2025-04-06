@@ -10,37 +10,42 @@ html {
 	box-sizing: inherit;
 }
 
-/* Make the main a Flex container, it's children will inherit and become flex items*/
+/* Flex isn't working for me, use Grid instead*/
 main {
-    display: flex;
-    /* flex flow combines both flex-direction and flex-wrap */
-    flex-flow: row wrap;
-    align-items: flex-start;
+    display: grid;
+    /* this will auto fit for the left column */
+    grid-template-columns: auto 1fr;
+    /* this should let the rows be taken up more as needed*/
+    grid-template-rows: auto;
+    gap: 10px;
 }
 
-/* Target the aside that holds the image*/
+/* Target the aside that holds the image, 1st column 1st row*/
 main > aside:nth-child(4) {
-    flex: 0 0 auto;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    grid-column: 1;
+    grid-row: 1;;
 }
-main > section, main>aside:nth-child(5) {
-    flex: 1 1 auto;
-    margin-bottom: 10px;
+/* Targets the aside that should be under the image*/
+main > aside:nth-child(5) {
+    grid-column: 1;
+    /* this will let it take up the remaining space under the image*/
+    grid-row: auto;
 }
 /* Target each of the remaining children separately*/
 main > section:nth-child(1) {
-    
+    grid-column: 2;
+    grid-row: 1;
 }
-main > aside:nth-child(2) {
-
+/* the rest of the sections will be set to auto for row*/
+main > section:nth-child(2) {
+    grid-column: 2;
+    grid-row: auto;
 }
 main > section:nth-child(3) {
+    grid-column: 2;
+    grid-row: auto;
+}
 
-}
-main > aside:nth-child(5) {
-    
-}
 /* To get the date line in all capitals use text transform.
 Postition absolute will move the date above the title.
 Add the z-index to make sure it stays as the top.
@@ -49,6 +54,7 @@ Add the z-index to make sure it stays as the top.
     position: relative; 
     padding: 20px;
 }
+/* this is for the date at the top*/
 body header p {
     text-transform: uppercase;
     position: absolute;
@@ -58,7 +64,7 @@ body header p {
     padding: 5px;
 }
 
-/*similarly text-transform will make the title lowercase*/
+/* this targets the title*/
 header h1 {
     text-transform: lowercase;
     /* increase the size of the h1*/
