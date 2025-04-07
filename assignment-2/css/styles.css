@@ -113,5 +113,29 @@ aside {
     padding: 40px 0;
 }
 p {
-    margin: 5px;
+    margin: 1px;
+}
+/*lets adjust the figure so the caption can go on top of the image*/
+main > aside figure {
+    position: relative;
+}
+main > aside figure img {
+    /* display block will make the image contained*/
+    display: block;
+    width: 100%;
+    height: auto;
+}
+main > aside figure figcaption {
+    /* make the caption an absolute and stick it to the bottom of the block image*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 40px;
+    padding-bottom: 25px;
+    color: white;
+}
+figcaption > p > em {
+    font-size: 7rem;
+    /*this gives the 31 it's own line*/
+    display: block;
 }
