@@ -5,6 +5,8 @@
 html {
 	box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 973px;
+    max-width: 1382px;
 }
 *, *:before, *:after {
 	box-sizing: inherit;
@@ -18,18 +20,19 @@ main {
     /* this should let the rows be taken up more as needed*/
     grid-template-rows: auto;
     gap: 10px;
+    align-items: start;
 }
 
 /* Target the aside that holds the image, 1st column 1st row*/
 main > aside:nth-child(4) {
     grid-column: 1;
-    grid-row: 1;;
+    grid-row: 1 / span 3;
 }
 /* Targets the aside that should be under the image*/
 main > aside:nth-child(5) {
     grid-column: 1;
     /* this will let it take up the remaining space under the image*/
-    grid-row: auto;
+    grid-row: 3;
 }
 /* Target each of the remaining children separately*/
 main > section:nth-child(1) {
@@ -39,11 +42,11 @@ main > section:nth-child(1) {
 /* the rest of the sections will be set to auto for row*/
 main > section:nth-child(2) {
     grid-column: 2;
-    grid-row: auto;
+    grid-row: 2;
 }
 main > section:nth-child(3) {
     grid-column: 2;
-    grid-row: auto;
+    grid-row: 3;
 }
 
 /* To get the date line in all capitals use text transform.
@@ -79,8 +82,30 @@ h2 {
     /*Crimson Text looks very close to the h2's*/
     font-family: 'Crimson Text', serif;
     text-transform: lowercase;
+    margin-bottom: 0;
+    font-size: 3rem;
+    margin-top: 0;
 }
 
 h3 {
     text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+ol {
+    margin-top: 0;
+}
+/* align footer with column 2 */
+footer {
+    grid-column: 2;
+    /* align the text to the right*/
+    text-align: right;
+    /* align the end of the footer to the right side of the grid*/
+    justify-self: end;
+}
+aside {
+    padding: 40px 0;
+}
+p {
+    margin: 5px;
 }
