@@ -16,7 +16,7 @@ html {
 main {
     display: grid;
     /* this will auto fit for the left column */
-    grid-template-columns: auto 1fr;
+    grid-template-columns: minmax(auto, 500px) 1fr;
     /* this should let the rows be taken up more as needed*/
     grid-template-rows: auto;
     gap: 10px;    
@@ -34,13 +34,13 @@ main > aside:nth-child(4) {
 main > aside:nth-child(5) {
     grid-column: 1;
     grid-row: 3;
-    /* adding some margin to separate them*/
-    margin-top: 15px;
+    /* margin to push it down and separate from img*/
+    margin-top: 150px;
     display: inline-block;
     flex-direction: column;
     /* attempt to make a fake box*/
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -55,8 +55,8 @@ main > aside:nth-child(5) > h2 {
 }
 main > aside:nth-child(5) > p {
     /*continue the border*/
-    border-left: 1px solid orange;
-    border-right: 1px solid orange;
+    border-left: 2px solid orange;
+    border-right: 2px solid orange;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 10px;
@@ -64,13 +64,14 @@ main > aside:nth-child(5) > p {
 }
 main > aside:nth-child(5) > ol {
     /*finish the border */
-    border-left: 1px solid orange;
-    border-bottom: 1px solid orange;
-    border-right: 1px solid orange;
+    border-left: 2px solid orange;
+    border-bottom: 2px solid orange;
+    border-right: 2px solid orange;
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 10px;
-    padding-left: 10px;
+    /* add extra for the markers*/
+    padding-left: 40px;
     padding-right: 10px;
 }
 /* Target each of the remaining children separately*/
@@ -87,7 +88,10 @@ main > section:nth-child(3) {
     grid-column: 2;
     grid-row: auto;
 }
-
+main > section {
+    /* to make the text readable*/
+    max-width: 75ch;
+}
 /* To get the date line in all capitals use text transform.
 Postition absolute will move the date above the title.
 Add the z-index to make sure it stays as the top.
@@ -171,4 +175,7 @@ figcaption > p > em {
     font-size: 7rem;
     /*this gives the 31 it's own line*/
     display: block;
+}
+p > em {
+    text-transform: uppercase;
 }
