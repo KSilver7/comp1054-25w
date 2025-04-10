@@ -9,7 +9,7 @@
 		<!-- Thanks to Tristen Brown for the excellent (dependency-free) table sorting script -->
 		<script src="js/tablesort/tablesort.min.js"></script>
 		<link href="js/tablesort/css/tablesort.css" rel="stylesheet">
-		<script src="js/tables.js"></script>
+		<script src="js/tables.js" defer></script>
 </head>
 
 <body>
@@ -35,10 +35,11 @@
 <!-- STEP 1b: Build out the appropriate number of rows with TR -->
 			<thead>
 				<tr>
-					<th rowspan="2" scope="col">Region</th>
+					<th></th>
 					<th colspan="3">Console</th>
 				</tr>
 				<tr>
+					<th scope="col">Region</th>
 					<th scope="col">PlayStation 3</th>
 					<th scope="col">Wii</th>
 					<th scope="col">Xbox 360</th>
