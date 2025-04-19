@@ -26,7 +26,8 @@ body {
   grid-template-areas:
   "header header"
   "nav    nav"
-  "main   aside"
+  "main   aside-top"
+  "main   aside-bottom"
   "footer footer";
 }
 /*assign the different parts to their sections of the grid*/
@@ -41,12 +42,22 @@ main {
 }
 aside {
   grid-area: aside;
+  display: block;  
 }
-footer {
+
+footer.page-footer {
   grid-area: footer;
 }
-
-
+/*set the annoying star to be smaller*/
+header .container a.link-github svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+/* target the star in the footer*/
+footer.page-footer ul li:nth-child(2) a.link-github svg {
+  width: 1.5em;
+  height: 1.5em;
+}
 /*Add a style section for smaller screens like phones */
 @media (max-width: 600px), (orientation: landscape) {
 
