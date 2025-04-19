@@ -8,7 +8,8 @@ html{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
   line-height: 1.5;
-  margin: 0 auto; 
+  margin: 0 auto;
+  background-color: rgb(245, 227, 247); 
 }
 *, *:before, *:after {
 	box-sizing: inherit;
