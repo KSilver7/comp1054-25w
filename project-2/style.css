@@ -9,21 +9,49 @@ html{
   font-size: 16px;
   line-height: 1.5;
   margin: 0 auto;
-  background-color: rgb(245, 227, 247); 
+  background-color: rgb(240, 178, 247); 
 }
 *, *:before, *:after {
 	box-sizing: inherit;
 }
+
+/*Best approach will be to use a grid while using some flex inside for 
+different elements*/
+body {
+  display: grid;
+  /*set the first column larger for the main stuff*/
+  grid-template-columns: 2fr 1fr;
+  /* Tentative layout
+  with column1 then column 2 (extra space just for clarity)*/
+  grid-template-areas:
+  "header header"
+  "nav    nav"
+  "main   aside"
+  "footer footer";
+}
+/*assign the different parts to their sections of the grid*/
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
+
+
 /*Add a style section for smaller screens like phones */
-@media (max-width: 600px) {
+@media (max-width: 600px), (orientation: landscape) {
 
 }
 /*section for larger screens*/
 @media (min-width: 600px), (max-width: 1440px) {
   
 } 
-/*Best approach will be to use a grid while using some flex inside for 
-different elements*/
-body {
-
-}
