@@ -26,8 +26,7 @@ body {
   grid-template-areas:
   "header header"
   "nav    nav"
-  "main   aside-top"
-  "main   aside-bottom"
+  "main   aside"
   "footer footer";
 }
 /*assign the different parts to their sections of the grid*/
@@ -42,7 +41,8 @@ main {
 }
 aside {
   grid-area: aside;
-  display: block;  
+  display: block;
+  margin: 0;  
 }
 
 footer.page-footer {
