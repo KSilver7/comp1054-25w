@@ -89,9 +89,12 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 nav ul li a:visited {
+  text-decoration: none;;
   color: rgb(245, 240, 113);
+  cursor: pointer;
 }
 
 /*set the annoying star to be smaller*/
@@ -125,14 +128,64 @@ footer.page-footer {
   padding: 2rem;
 }
 blockquote {
-  border: 2px solid black;
   padding-left: 2rem;
   padding-right: 2rem;
+  border: 2px solid lightgray;
+  outline: 2px solid darkgray;
+  outline-offset: 2px;
+  background-color: #f9f9f9;
 }
+/*use the :not psuedo class to ensure our nav links are left as is*/
+a:not(nav a) {
+  color: #800080;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:not(nav a):visited {
+  color: #006400;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:not(nav a):hover {
+  color: #9400d3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/*lets make it obvious if they have a link in focus*/
+a:not(nav a):focus {
+  color: #ffff00;
+  text-decoration: underline;
+  cursor: pointer;
+  outline: 2px solid #ffff00;
+  outline-offset: 2px;
 
-
-
-
+}
+h2{
+  color: rgb(236, 103, 251);
+}
+header h2 {
+  color: #36454f;
+}
+h3 {
+  color: rgba(236, 103, 251, 0.8);
+}
+h4 {
+  color: #696969;
+}
+strong {
+  color: #c71585;
+  font-weight: bold;
+}
+aside ul {
+  list-style-type: circle;
+}
+main ul {
+  list-style-type: none;
+}
+/* add a flower type bullet point with unicode, maybe colour it*/
+main ul li {
+  
+}
 /*Add a style section for smaller screens like phones */
 @media (max-width: 600px), (orientation: landscape) {
 
