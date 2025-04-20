@@ -26,8 +26,11 @@ body {
   grid-template-areas:
   "header header"
   "nav    nav"
-  "main   aside"
+  "main   sidebar-top"
+  "main   sidebar-bottom"
   "footer footer";
+  grid-template-rows: auto auto auto auto auto;
+  gap: 1rem;
 }
 /*assign the different parts to their sections of the grid*/
 header {
@@ -39,15 +42,50 @@ nav {
 main {
   grid-area: main;
 }
-aside {
-  grid-area: aside;
-  display: block;
-  margin: 0;  
+/*set the asides as flex to try and bring them closer together*/
+body > aside:first-of-type {
+  grid-area: sidebar-top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+body > aside:last-of-type {
+  grid-area: sidebar-bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
 }
 
 footer.page-footer {
   grid-area: footer;
 }
+/*Change the nav to be horizonatal*/
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* Add spacing between the list items*/
+nav ul li {
+  margin-right: 10px;
+  padding: .5rem 1rem;
+  background-color: rgb(93, 93, 198);
+  color: black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgb(114, 103, 103);
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+nav ul li a:visited {
+  color: rgb(245, 240, 113);
+}
+
 /*set the annoying star to be smaller*/
 header .container a.link-github svg {
   width: 1.5em;
