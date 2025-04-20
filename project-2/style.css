@@ -182,9 +182,13 @@ aside ul {
 main ul {
   list-style-type: none;
 }
-/* add a flower type bullet point with unicode, maybe colour it*/
-main ul li {
-  
+/* add a flower(cherry blossom) type bullet point with unicode, maybe colour it*/
+main ul li::before {
+  content: "\1F338";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-right: 0.6em;
 }
 /*Add a style section for smaller screens like phones */
 @media (max-width: 600px), (orientation: landscape) {
