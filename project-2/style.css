@@ -177,7 +177,8 @@ strong {
   font-weight: bold;
 }
 aside ul {
-  list-style-type: circle;
+  list-style-type: none;
+  
 }
 main ul {
   list-style-type: none;
@@ -189,6 +190,18 @@ main ul li::before {
   width: 1em;
   margin-left: -1em;
   margin-right: 0.6em;
+}
+aside ul li::before {
+  content: "\273F";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-right: 0.6em;
+  color: #a8bca8;
+}
+h1 {
+  color: #c71585;
+  
 }
 /*Add a style section for smaller screens like phones */
 @media (max-width: 600px), (orientation: landscape) {
